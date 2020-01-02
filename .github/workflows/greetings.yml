@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Hi there! Please read the documentation and guidelines before contributing.'' first issue'
+        pr-message: 'Thank you for contributing! I would love to hear your feedback! Mail me on ankushors789@gmail.com'' first pr'
