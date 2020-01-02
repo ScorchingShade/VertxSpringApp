@@ -1,0 +1,14 @@
+ /*List<Future> li= new ArrayList<Future>();
+        li.add(VerticleDeployHelper.deployHelper(vertx,SendVerticle.class.getName()));
+        li.add(VerticleDeployHelper.deployHelper(vertx,ReceiverVerticle.class.getName()));
+
+        CompositeFuture.all(li).setHandler(ar->{
+            if(ar.succeeded()){
+                log.debug("Added all Verticles >>>>>>");
+            }
+            else{
+                log.debug("Couldn't add any verticles >>>>>");
+            }
+        });
+
+        future.complete();*/
