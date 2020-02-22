@@ -5,6 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
+/**
+ * @author Ankush @ ScorchingShade
+ *
+ * The class acts as a configuration helper for the spring boot application
+ */
 @Configuration
 public class ApplicationConfiguration {
 

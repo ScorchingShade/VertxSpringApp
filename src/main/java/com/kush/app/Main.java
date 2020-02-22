@@ -28,16 +28,18 @@ public class Main {
     }
 
 
+    /**
+     * Deploying new verticles through a helper class
+     */
     @PostConstruct
     public void deployServerVerticles() {
-       vertx.deployVerticle(new ReceiverVerticle(), ar -> {
-            if (ar.succeeded()) {
-               vertx.deployVerticle(new SenderVerticle());
-            } else {
-                System.out.println("Deployment failed...");
-            }
-        });
-
-
+      vertx.deployVerticle(new DeployerVerticle(), ar->{
+          if(ar.succeeded()){
+              log.debug("Successfully deployed verticle.");
+          }
+          else{
+              log.debug("Deployment failed ::"+ar.cause());
+          }
+      });
     }
 }
